@@ -27,11 +27,20 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.gameObject.GetComponent<Player>())
+        if (photonView.IsMine)
         {
-            Destroy(this.gameObject);
+            photonView.RPC(nameof(DestroyBullet), RpcTarget.AllBuffered);
+            if (other.gameObject.TryGetComponent<Player>(out Player player))
+            {
+                player.SetDamage(10f);
+            }
         }
     }
 
+    [PunRPC]
+    private void DestroyBullet()
+    {
+        Destroy(this.gameObject);
+    }
 
 }
