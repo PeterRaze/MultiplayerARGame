@@ -1,29 +1,30 @@
-# README #
+# Multiplayer AR Shooter v1.0
 
-This README would normally document whatever steps are necessary to get your application up and running.
+## Development Tools:
 
-### What is this repository for? ###
+- Unity 2020.3.32f1
+- Vuforia 10.5.5
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+## Description
 
-### How do I get set up? ###
+This application is a multiplayer AR target-based game that consists in destroying the opponent shooting theirs.
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+Each player has an HP bar. If this bar runs out, the player is destroyed.
 
-### Contribution guidelines ###
+![](Docs/Player.PNG)
 
-* Writing tests
-* Code review
-* Other guidelines
+## Requirements to Play
 
-### Who do I talk to? ###
+- Android 6.0 (Marshmallow)
+- Target (Available in the Docs folder)
 
-* Repo owner or admin
-* Other community or team contact
+## Setup
+
+1. Download and print the Target image
+
+![](Docs/Target.jpeg)
+
+2. Start the Application
+3. Create or Join a room 
+
+![](Docs/Lobby.PNG)
