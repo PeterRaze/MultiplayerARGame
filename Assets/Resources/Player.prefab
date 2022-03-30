@@ -299,6 +299,7 @@ MonoBehaviour:
   turret: {fileID: 6041556578458562004}
   bulletStartPoint: {fileID: 1498535266460097051}
   playerUI: {fileID: 6150437374666370412}
+  bodyMeshRenderer: {fileID: 2714060435464059966}
   hp: 30
 --- !u!114 &1436429386231493610
 MonoBehaviour:
@@ -726,7 +727,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3b47331158c6f964282defbe1e3c36f0, type: 2}
   - {fileID: -716932223773548673, guid: dbb07e686659a094d9c37256ae6a604a, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
