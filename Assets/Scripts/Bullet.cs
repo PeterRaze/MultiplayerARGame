@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
 {
     private Rigidbody bulletRig;
     private PhotonView photonView;
+    private float damage = 10f;
 
     void Awake()
     {
@@ -32,7 +33,12 @@ public class Bullet : MonoBehaviour
             photonView.RPC(nameof(DestroyBullet), RpcTarget.AllBuffered);
             if (other.gameObject.TryGetComponent<Player>(out Player player))
             {
-                player.SetDamage(10f);
+                player.SetDamage(damage);
+            }
+
+            if (other.gameObject.TryGetComponent<Agent>(out Agent agent))
+            {
+                agent.SetDamage(damage);
             }
         }
     }

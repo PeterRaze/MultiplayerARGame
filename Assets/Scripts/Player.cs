@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 using Photon.Pun;
 using System.Collections;
+using System;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(PhotonView))]
@@ -22,8 +23,14 @@ public class Player : MonoBehaviour
     [SerializeField]
     private PlayerUI playerUI;
 
+    [SerializeField]
+    private MeshRenderer bodyMeshRenderer;
+
     private Rigidbody playerRig;
     private PhotonView photonView;
+
+    public delegate void OnPlayerDestruction();
+    public event OnPlayerDestruction onPlayerDestruction;
 
     private bool isAllowedToShoot;
 
@@ -102,10 +109,20 @@ public class Player : MonoBehaviour
         StartCoroutine(AllowShoot());
     }
 
+    public void SetColor(Color color)
+    {
+        bodyMeshRenderer.material.color = color;
+    }
+
     private IEnumerator AllowShoot()
     {
         yield return new WaitForSeconds(1f);
         isAllowedToShoot = true;
+    }
+
+    private void OnDestroy()
+    {
+        onPlayerDestruction?.Invoke();
     }
 
 }
