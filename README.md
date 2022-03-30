@@ -1,4 +1,4 @@
-# Multiplayer AR Shooter v1.0
+# Multiplayer AR Shooter v2.0
 
 ## Development Tools:
 
