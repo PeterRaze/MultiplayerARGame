@@ -34,6 +34,9 @@ public class ServerManager : MonoBehaviourPunCallbacks
     [SerializeField]
     private Text errorMessage;
 
+    //private readonly string Multiplayer = "Multiplayer";
+    private readonly string Multiplayer = "MM_AR_OFF";
+
     private void Start()
     {
         PhotonNetwork.OfflineMode = false;
@@ -80,7 +83,7 @@ public class ServerManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
-        PhotonNetwork.LoadLevel("Multiplayer");
+        PhotonNetwork.LoadLevel(Multiplayer);
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)

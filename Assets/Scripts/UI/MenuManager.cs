@@ -31,8 +31,11 @@ public class MenuManager : MonoBehaviourPunCallbacks
     [SerializeField]
     private GameObject howToPlayPanel;
 
-    private readonly string SingleMode = "SingleMode";
-    private readonly string TrainingMode = "TrainingMode";
+    //private readonly string SingleMode = "SingleMode";
+    private readonly string SingleMode = "SM_AR_OFF";
+    //private readonly string TrainingMode = "TrainingMode";
+    private readonly string TrainingMode = "TM_AR_OFF";
+    private readonly string Lobby = "Lobby";
 
     void Start()
     {
@@ -81,7 +84,7 @@ public class MenuManager : MonoBehaviourPunCallbacks
 
     private void LoadLobbyScene()
     {
-        SceneManager.LoadScene("Lobby");
+        SceneManager.LoadScene(Lobby);
     }
 
 }

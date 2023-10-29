@@ -103,7 +103,7 @@ public class Player : MonoBehaviour
     private void Fire()
     {
         var bulletInstance = PhotonNetwork.Instantiate(bullet.gameObject.name, bulletStartPoint.position, Quaternion.identity).GetComponent<Bullet>();
-        bulletInstance.transform.SetParent(transform.root, true);
+        bulletInstance.transform.SetParent(null, true);
 
         bulletInstance.Shoot(new Vector3(Mathf.Sin(turret.localEulerAngles.y * Mathf.Deg2Rad), 0, Mathf.Cos(turret.localEulerAngles.y * Mathf.Deg2Rad)));
         StartCoroutine(AllowShoot());

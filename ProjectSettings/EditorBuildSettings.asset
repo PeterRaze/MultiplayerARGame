@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TrainingMode.unity
     guid: 922ba71a98c4bb5499453319d3603ffb
+  - enabled: 1
+    path: Assets/Scenes/TM_AR_OFF.unity
+    guid: 648153536eb34a94ca0e3f26b215f127
+  - enabled: 1
+    path: Assets/Scenes/SM_AR_OFF.unity
+    guid: 1db653ef3c400a94dbf73ff4dda694fd
+  - enabled: 1
+    path: Assets/Scenes/MM_AR_OFF.unity
+    guid: ce2eff8959d70cf4287d6dee4deba48a
   m_configObjects: {}

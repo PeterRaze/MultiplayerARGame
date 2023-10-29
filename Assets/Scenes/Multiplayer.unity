@@ -490,7 +490,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1284244809}
+  - {fileID: 983656253}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -716,7 +716,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!21 &1284244809
+--- !u!21 &983656253
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -725,7 +725,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: 'TargetMaterial
 
-    20408'
+    51496'
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
