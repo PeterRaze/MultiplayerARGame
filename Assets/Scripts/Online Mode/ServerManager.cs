@@ -34,8 +34,8 @@ public class ServerManager : MonoBehaviourPunCallbacks
     [SerializeField]
     private Text errorMessage;
 
-    //private readonly string Multiplayer = "Multiplayer";
-    private readonly string Multiplayer = "MM_AR_OFF";
+    private readonly string Multiplayer = "Multiplayer";
+    //private readonly string Multiplayer = "MM_AR_OFF";
 
     private void Start()
     {
